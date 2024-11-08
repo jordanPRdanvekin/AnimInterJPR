@@ -5,26 +5,21 @@ using TMPro;
 
 public class botonesCrear : MonoBehaviour
 {
-    // antes de empezar es importante tener en cuenta que habra varios botones con la misma funcion pero cada boton llamara a un objeto diferente.
+    // antes de empezar es importante tener en cuenta que habra varios botones con la misma funcion pero cada boton llamara a un prefab asociado diferente todos estos botones se puede acceder desde el menu botones y son los ''bottonObjeto''.
     void Start()
     {
         //se almacena la posicion original de ''informacion'' 
     }
 
     // Update is called once per frame
-    void Creamos()
+    void FunciionArbol()
     {
-        //se genera un objeto en el cursor el cual sigue el movimiento de este
-        //al hacer click se instancia con leantween dicho objeto en el escenario haciendo que ''cresca'' a su tamaño original y se crea otro objeto que siga al cursor el objeto que sigue al cursor no tiene colision pero el instanciado si
-        //ademas usando leantween se llama a ''informacion'' desde arriba del todo haciendo que ''desciendia'' a su posicion original
-        //es importante que el texto de informacion sea '' estas creando el objeto (nombre del objeto que se esta creando mediante prefab)'' 
-        //ademas menuL se oculta usando el mismo leantween 
-        //si hay que usar mas funciones o dividir esta funsion en varias hacerlo
-    }
-    void Cancelar()
-    {
-        //al cancelar se vuelve a enviar hacia ''arriba'' al objeto ''informacion'' 
-        //ademas se vuelve a llamar al menuL 
-        //y por ultimo se elimina el objeto en el raton usando una animacion de leantween que haga rotar el objeto y encojer para luego ser borrado. 
+        //se creara una funcion por cada uno de los 5 botones cada boton hara lo siguiente por ejemplo esta seria la funcion para el boton arbol
+        //llamar a su prefab asociado
+        //permitir al jugador crear mediante raycast el objeto. 
+        //se genera un objeto en el cursor el cual sigue el movimiento de este y no tiene impacto ni colision para aparecer como referencia al objeto que se ''crearia'' si se usa el click derecho en el lugar donde este se generariaeste objeto no puede rotar
+        //al hacer click en uno de los botones se instancia con leantween el prefab asociado a dicho boton en el escenario haciendo que ''cresca'' a su tamaño original y se crea otro objeto que siga al cursor el objeto que sigue al cursor no tiene colision pero el instanciado si
+        //ademas menuL se oculta usando el mismo leantween y para crear el objeto usando raycast para detectar coliciones y al hacer click derecho generara el item en el lugar de impacto 
+        //si hay que usar mas funciones o dividir esta funsion en varias hacerlo pero trata de mantener el script limpio y breve ademas la idea es que el objeto a crear se pueda rotar con la rueda del raton y previsualizar como se veria antes de crearlo (al mas puro estilo de citibuilders o sims).
     }
 }
